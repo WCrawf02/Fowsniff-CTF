@@ -21,4 +21,10 @@ Access the web server running on port 80 by visiting **htpp://<target_IP>** in t
 
 We then retrieve the list of usernames and hashed passwords and save the data to files on the local machine.
 
-![Password Hashes](https://github.com/user-attachments/assets/6709da69-58fb-4492-b291-e01a7f362933)
+![Password Hashes](https://github.com/user-attachments/assets/146aeb2c-2134-4165-96c4-c5a7c91de601)
+
+Crack the MD5 hashes using hashes.com and save the results to hashcracked.txt.
+
+![Hashes decrypted](https://github.com/user-attachments/assets/830dbd85-d7d7-4346-bac7-55c56c816d82)
+
+
