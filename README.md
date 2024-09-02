@@ -48,15 +48,19 @@ Access the web server running on port 80 by visiting **htpp://<target_IP>** in t
 
 - Connect to the POP3 service using the newly found credentials:
   - nc <target_IP>
-    *user* <username>
+    - *user* <username>
     *password* <password>
 
 - We come across two emails we can view:
 
 ![list messages](https://github.com/user-attachments/assets/2dba789f-f52c-4b97-9a35-3b9c7c2544dc)
 
+- Retrieve the emails:
+  LIST; RETR 1; RETR 2
 
+![SSH password email sent](https://github.com/user-attachments/assets/41885922-031d-4581-bbf6-84548941d8b4)
 
+- In the second email we accessed, we can view a temp password for SSH and a possible username.
 
 
 
