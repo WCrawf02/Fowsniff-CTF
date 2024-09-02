@@ -27,6 +27,8 @@ Access the web server running on port 80 by visiting **htpp://<target_IP>** in t
 
 ![Hashes decrypted](https://github.com/user-attachments/assets/830dbd85-d7d7-4346-bac7-55c56c816d82)
 
+- create files for both **usernames** (username.txt) and the newly cracked **passwords** (password.txt.
+
 ## Gaining Access 🕸️ ##
 
 - Use Metasploit module for brute forcing the POP3 service: 
