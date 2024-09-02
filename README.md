@@ -15,6 +15,10 @@ The target IP address is provided when the machine is deployed. For this walkthr
   ![initial nmap scan](https://github.com/user-attachments/assets/14302e40-3f1e-4e4f-aa0a-88422f970a5b)
 
 ## Enumeration 🔬 ##
-Access the web server running on port 80 by visiting **htpp://<target_IP> in the browser. The website reveals that attackers have dumped employee usernames and hashed passwords on Pastebin.
+Access the web server running on port 80 by visiting **htpp://<target_IP>** in the browser. The website reveals that attackers have dumped employee usernames and hashed passwords on Pastebin.
 
 ![enum website ](https://github.com/user-attachments/assets/a5865fcc-4eea-41b2-9c8e-bc2e076cf74d)
+
+We then retrieve the list of usernames and hashed passwords and save the data to files on the local machine.
+
+![Password Hashes](https://github.com/user-attachments/assets/6709da69-58fb-4492-b291-e01a7f362933)
