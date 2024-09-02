@@ -27,7 +27,7 @@ Access the web server running on port 80 by visiting **htpp://<target_IP>** in t
 
 ![Hashes decrypted](https://github.com/user-attachments/assets/830dbd85-d7d7-4346-bac7-55c56c816d82)
 
-- create files for both **usernames** (username.txt) and the newly cracked **passwords** (password.txt.
+- Create files for both **usernames** (username.txt) and the newly cracked **passwords** (password.txt.
 
 ## Gaining Access 🕸️ ##
 
@@ -41,4 +41,23 @@ Access the web server running on port 80 by visiting **htpp://<target_IP>** in t
   - exploit
 
 ![set options in metasploit](https://github.com/user-attachments/assets/ecf9f1c0-aacf-4024-a540-1dfd6e234e04)
+
+- Running the Metasploit module, we find a matching username and password.  We are now able to connect to the POP3 mail server 📨 !!!
+
+![used hydra to dictionary attack](https://github.com/user-attachments/assets/8fb317ff-0597-4a30-9291-617e8a9fd51b)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
