@@ -7,4 +7,7 @@ The target IP address is provided when the machine is deployed. For this walkthr
 
 ## Scanning 🩻 ##
 **Results**:
-- **Port 22/tcp** 
+- **Port 22/tcp** - SSH - (OpenSSH 7.2p2)
+- **Port 80/tcp** - HTTP - (Apache httpd 2.4.18)
+- **Port 110/tcp)** - POP3 - (Dovecot pop3d)
+- **Port 143/tcp)** - IMAP - (Dovecot imapd)
