@@ -63,7 +63,7 @@ Access the web server running on port 80 by visiting **htpp://<target_IP>** in t
 - In the second email we accessed, we can view a temp password for SSH and a possible username.
 - Next, use hydra to brute force the SSH login:
   - hydra -L users.txt -p "<password>" ssh://<target_IP>
-  - or, in the second email can shed light on the username.
+  - or, the first email can shed light on the username.
 - Next, we attempt to connect via SSH
 
 ![SSH connection](https://github.com/user-attachments/assets/3d6c8518-a748-4351-a11d-fab27a726038)
