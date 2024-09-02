@@ -46,7 +46,10 @@ Access the web server running on port 80 by visiting **htpp://<target_IP>** in t
 
 ![used hydra to dictionary attack](https://github.com/user-attachments/assets/8fb317ff-0597-4a30-9291-617e8a9fd51b)
 
-
+- Connect to the POP3 service using the newly found credentials:
+  - nc <target_IP>
+    *user* <username>
+    *password* <password>
 
 
 
