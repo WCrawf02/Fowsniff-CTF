@@ -51,6 +51,11 @@ Access the web server running on port 80 by visiting **htpp://<target_IP>** in t
     *user* <username>
     *password* <password>
 
+- We come across two emails we can view:
+
+![list messages](https://github.com/user-attachments/assets/2dba789f-f52c-4b97-9a35-3b9c7c2544dc)
+
+
 
 
 
