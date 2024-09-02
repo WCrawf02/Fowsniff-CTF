@@ -11,3 +11,6 @@ The target IP address is provided when the machine is deployed. For this walkthr
 - **Port 80/tcp** - HTTP - (Apache httpd 2.4.18)
 - **Port 110/tcp)** - POP3 - (Dovecot pop3d)
 - **Port 143/tcp)** - IMAP - (Dovecot imapd)
+
+  ![initial nmap scan](https://github.com/user-attachments/assets/14302e40-3f1e-4e4f-aa0a-88422f970a5b)
+
